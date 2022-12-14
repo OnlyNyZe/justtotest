@@ -39,7 +39,7 @@ else #All configurations for Linux OS
 	  # Correct the path based on OS
       FixPath = $1				
 	  # Name of the compiler used
-	  CC = gcc
+	  CC = avr-gcc
 	  # Name of the elf to hex file converter used
 	  AVR_OBJ_CPY = avr-objcopy 
    endif
