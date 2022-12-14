@@ -3,7 +3,7 @@ PROJ_NAME = SeatHeatApp
 BUILD_DIR = Build
 
 # All Source code files
-# SRC = src/SeatHeatingApp.c\
+SRC = SeatHeatingApp.c\
 src/activity1.c\
 src/activity2.c\
 src/activity3.c\
@@ -70,3 +70,6 @@ doc:
 
 clean:
 	# Remove all the build files and generated document files
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	make -C documentation clean
+	rmdir $(BUILD_DIR)
