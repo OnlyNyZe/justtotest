@@ -50,7 +50,6 @@ endif
 
 all:$(BUILD_DIR)
 	# Compile the code and generate the ELF file
-	mkdir $(BUILD_DIR)
 	$(CC) -g -Wall -Os -mmcu=atmega328 -DF_CPU=16000000UL $(INC) $(SRC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
 	
 hex: $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
