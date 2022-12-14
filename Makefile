@@ -3,7 +3,7 @@ PROJ_NAME = SeatHeatApp
 BUILD_DIR = Build
 
 # All Source code files
-SRC = SeatHeatingApp.c\
+SRC = src/SeatHeatingApp.c\
 src/activity1.c\
 src/activity2.c\
 src/activity3.c\
@@ -47,6 +47,9 @@ endif
 
 # Command to make to consider these names as targets and not as file names in folder
 .PHONY:all analysis clean doc
+
+avr:
+	sudo apt-get install gcc-avr binutils-avr avr-libc
 
 all:$(BUILD_DIR)
 	# Compile the code and generate the ELF file
