@@ -50,6 +50,7 @@ endif
 
 all:$(BUILD_DIR)
 	# Compile the code and generate the ELF file
+	mkdir $(BUILD_DIR)
 	$(CC) -g -Wall -Os -mmcu=atmega328 -DF_CPU=16000000UL $(INC) $(SRC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
 	
 hex: $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
@@ -70,6 +71,7 @@ doc:
 
 clean:
 	# Remove all the build files and generated document files
+	mkdir $(BUILD_DIR)
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	make -C documentation clean
 	rmdir $(BUILD_DIR)
